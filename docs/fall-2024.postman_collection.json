@@ -1,0 +1,299 @@
+{
+	"info": {
+		"_postman_id": "60ae4ae2-dcca-4bc1-8eca-7b9d4df1f67f",
+		"name": "fall-2024",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33205286",
+		"_collection_link": "https://grey-firefly-954776.postman.co/workspace/BongoDev~98d7ee2d-c55f-4f73-a39c-eabb34f30721/collection/33205286-60ae4ae2-dcca-4bc1-8eca-7b9d4df1f67f?action=share&source=collection_link&creator=33205286"
+	},
+	"item": [
+		{
+			"name": "e-commerce-api",
+			"item": [
+				{
+					"name": "Get Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "example 1",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/products",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"products"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "355"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"163-dXI7k7ImYyPU9xXNhkhXlNCjqLo\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 15 Feb 2025 16:13:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"31692e3a-5c7a-4765-861e-2b1968c45070\",\n        \"name\": \"baked beans\",\n        \"price\": 0.4,\n        \"image\": \"beans.jpg\",\n        \"type\": \"vegetables\"\n    },\n    {\n        \"_id\": \"cf508444-16fc-4c1f-959a-18ad8a4d8257\",\n        \"name\": \"hot dogs\",\n        \"price\": 1.99,\n        \"image\": \"hotdogs.jpg\",\n        \"type\": \"meat\"\n    },\n    {\n        \"_id\": \"a47947c5-cb6d-4b35-80f0-4ac25f30b2c5\",\n        \"name\": \"New Product\",\n        \"price\": 0.4,\n        \"image\": \"beans.jpg\",\n        \"type\": \"vegetables\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Add Product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"New Product\",\n    \"price\": 0.4,\n    \"image\": \"beans.jpg\",\n    \"type\": \"vegetables\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "example 1",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"New Product\",\n    \"price\": 0.4,\n    \"image\": \"beans.jpg\",\n    \"type\": \"vegetables\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/products",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"products"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "119"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"77-Y1KG6+uFlwZ9TOxuF+ZiVcqySSo\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 15 Feb 2025 16:12:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"a47947c5-cb6d-4b35-80f0-4ac25f30b2c5\",\n    \"name\": \"New Product\",\n    \"price\": 0.4,\n    \"image\": \"beans.jpg\",\n    \"type\": \"vegetables\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update products",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Updated product\",\n    \"price\": 0.58,\n    \"image\": \"kidney.jpg\",\n    \"type\": \"vegetables\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/products/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "8f9a5e60-2b6d-4051-9ff4-1aca15bd8e01"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update products",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Updated product\",\n    \"price\": 0.58,\n    \"image\": \"kidney.jpg\",\n    \"type\": \"vegetables\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/products/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"products",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "8f9a5e60-2b6d-4051-9ff4-1aca15bd8e01"
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "125"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"7d-koPCA8u9jPaOtogaxiCifr9yrR8\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 15 Feb 2025 16:28:32 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"8f9a5e60-2b6d-4051-9ff4-1aca15bd8e01\",\n    \"name\": \"Updated product\",\n    \"price\": 0.58,\n    \"image\": \"kidney.jpg\",\n    \"type\": \"vegetables\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Products",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
