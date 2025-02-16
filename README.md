@@ -1,7 +1,7 @@
 # Fall 2024 Nodejs
 
 - [x] Create a simple CRUD app with express
-- [ ] Add router and middleware
+- [x] Add router, middleware, and error handling
 - [ ] Add mongoDB
 - [ ] Validation with zod
 - [ ] File upload
