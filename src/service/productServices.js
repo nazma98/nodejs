@@ -29,7 +29,7 @@ const updateProduct = (id, payload) => {
   let updatedProductIndex = products.findIndex((product) => product._id === id);
 
   if (updatedProductIndex === -1) {
-    throw new Error(`No product exists with id ${id}`);
+    throw new Error(`Product not found`);
   }
 
   products[updatedProductIndex] = {
@@ -44,7 +44,7 @@ const deleteProduct = (id) => {
   let productIndex = products.findIndex((product) => product._id === id);
 
   if (productIndex === -1) {
-    return res.status(400).json({ message: `No product exists with id ${id}` });
+    throw new Error(`No product exists with id ${id}`);
   }
 
   products.splice(productIndex, 1);
