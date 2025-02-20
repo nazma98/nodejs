@@ -36,7 +36,7 @@ app.get('/api/products', (req, res) => {
 app.post('/api/products', (req, res) => {
   const newProductData = req.body;
   const newProduct = { _id:uuidv4(), ...newProductData}
-  products.push(newProduct)
+  products.unshift(newProduct)
 
   res.status(201).json(newProduct)
 })
