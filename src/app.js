@@ -1,4 +1,6 @@
 const express = require('express')
+const { v4: uuidv4 } = require('uuid');
+
 const port = 8000
 
 const app = express()
@@ -8,77 +10,19 @@ app.use(express.json())
 
 const products = [
   {
+    _id: uuidv4(),
     "name": "baked beans",
     "price": 0.4,
     "image": "beans.jpg",
     "type": "vegetables"
   },
   {
+    _id: uuidv4(),
     "name": "hot dogs",
     "price": 1.99,
     "image": "hotdogs.jpg",
     "type": "meat"
   },
-  {
-    "name": "spam",
-    "price": 2.85,
-    "image": "spam.jpg",
-    "type": "meat"
-  },
-  {
-    "name": "refried beans",
-    "price": 0.99,
-    "image": "refried.jpg",
-    "type": "vegetables"
-  },
-  {
-    "name": "kidney beans",
-    "price": 0.58,
-    "image": "kidney.jpg",
-    "type": "vegetables"
-  },
-  {
-    "name": "garden peas",
-    "price": 0.52,
-    "image": "gardenpeas.jpg",
-    "type": "vegetables"
-  },
-  {
-    "name": "mushy peas",
-    "price": 0.58,
-    "image": "mushypeas.jpg",
-    "type": "vegetables"
-  },
-  {
-    "name": "corned beef",
-    "price": 2.39,
-    "image": "cornedbeef.jpg",
-    "type": "meat"
-  },
-  {
-    "name": "tomato soup",
-    "price": 1.4,
-    "image": "tomatosoup.jpg",
-    "type": "soup"
-  },
-  {
-    "name": "chopped tomatoes",
-    "price": 0.45,
-    "image": "tomato.jpg",
-    "type": "vegetables"
-  },
-  {
-    "name": "chicken noodle soup",
-    "price": 1.89,
-    "image": "chickennoodle.jpg",
-    "type": "soup"
-  },
-  {
-    "name": "carrot and coriander soup",
-    "price": 1.49,
-    "image": "carrotcoriander.jpg",
-    "type": "soup"
-  }
 ];
 
 app.get('/status', (req, res) => {
@@ -90,7 +34,8 @@ app.get('/api/products', (req, res) => {
 });
 
 app.post('/api/products', (req, res) => {
-  const newProduct = req.body
+  const newProductData = req.body;
+  const newProduct = { _id:uuidv4(), ...newProductData}
   products.push(newProduct)
 
   res.status(201).json(newProduct)
