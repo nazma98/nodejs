@@ -1,8 +1,10 @@
 const express = require('express')
+const port = 8000
 
 const app = express()
 
-const port = 8000
+app.use(express.json())
+
 
 const products = [
   {
@@ -88,7 +90,10 @@ app.get('/api/products', (req, res) => {
 });
 
 app.post('/api/products', (req, res) => {
-  res.send("Product added successfully!")
+  const newProduct = req.body
+  products.push(newProduct)
+
+  res.status(201).json(newProduct)
 })
 
 app.listen(port, () => {
