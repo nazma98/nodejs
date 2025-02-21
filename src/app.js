@@ -1,12 +1,11 @@
-require('dotenv').config();
-
 const express = require('express');
 
 const { logRequestMiddleware, errorHandler } = require('./middleware');
 const { configureRouter } = require('./router');
 const connectDB = require('./db');
+const config = require('./config');
 
-const port = 8000;
+const port = config.PORT;
 
 const app = express();
 
