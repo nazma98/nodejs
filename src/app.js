@@ -54,12 +54,24 @@ app.put('/api/products/:id', (req, res) => {
   const payload = req.body;
 
   if (updatedProductIndex === -1) {
-    return res.status(400).json({ message: `No product available with id ${id}` })
+    return res.status(400).json({ message: `No product available with id ${id}` });
   }
 
   products[updatedProductIndex] = { ...products[updatedProductIndex], ...payload }
 
   res.status(201).json({ message: `Product updated successfully!` })
+});
+
+app.delete('/api/products/:id', (req, res) => {
+  const { id } = req.params;
+  const productIndex = products.findIndex((product) => product._id === id);
+
+  if(productIndex === -1) {
+    return res.status(400).json({ message: `No product available with id ${id}`});
+  }
+
+  products.splice(productIndex, 1);
+  res.status(201).json({ message: 'Product has been deleted'});
 });
 
 app.listen(port, () => {
