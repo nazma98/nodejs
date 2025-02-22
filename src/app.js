@@ -1,5 +1,5 @@
 const express = require('express')
-const { productRouter, userRouter } = require('./router');
+const  { configureRouter } = require('./router');
 
 const port = 8000
 
@@ -7,13 +7,7 @@ const app = express()
 
 app.use(express.json())
 
-app.get('/status', (req, res) => {
-  res.send('OK')
-})
-
-app.use(productRouter);
-
-app.use(userRouter);
+configureRouter(app);
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
