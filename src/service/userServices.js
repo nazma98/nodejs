@@ -44,7 +44,7 @@ const updatedUser = (id, payload) => {
     const updatedUserIndex = users.findIndex((user) => user._id === id);
 
     if (updatedUserIndex === -1) {
-        throw new console.error(` No user with id ${id}`);
+        throw new Error(` No user with id ${id}`);
     }
 
     users[updatedUserIndex] = { ...users[updatedUserIndex], ...payload };
@@ -55,7 +55,7 @@ const deleteUser = (id) => {
     const deleteUserIndex = users.findIndex((user) => user._id === id);
 
     if (deleteUserIndex === -1) {
-        throw new console.error(` No user with id ${id}`);
+        throw new Error(` No user with id ${id}`);
     }
 
     users.splice(deleteUserIndex, 1);
