@@ -30,7 +30,7 @@
 					},
 					"response": [
 						{
-							"name": "example 1",
+							"name": "Get Products",
 							"originalRequest": {
 								"method": "GET",
 								"header": [],
@@ -56,20 +56,28 @@
 									"value": "Express"
 								},
 								{
+									"key": "RateLimit-Policy",
+									"value": "\"1000-in-15min\"; q=1000; w=900; pk=:ZWZmOGU3Y2E1MDY2:"
+								},
+								{
+									"key": "RateLimit",
+									"value": "\"1000-in-15min\"; r=999; t=900"
+								},
+								{
 									"key": "Content-Type",
 									"value": "application/json; charset=utf-8"
 								},
 								{
 									"key": "Content-Length",
-									"value": "355"
+									"value": "319"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"163-dXI7k7ImYyPU9xXNhkhXlNCjqLo\""
+									"value": "W/\"13f-ENR3qnPMye5q+S/7jqZU5GuF5PA\""
 								},
 								{
 									"key": "Date",
-									"value": "Sat, 15 Feb 2025 16:13:09 GMT"
+									"value": "Sun, 23 Feb 2025 17:07:16 GMT"
 								},
 								{
 									"key": "Connection",
@@ -81,7 +89,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n    {\n        \"_id\": \"31692e3a-5c7a-4765-861e-2b1968c45070\",\n        \"name\": \"baked beans\",\n        \"price\": 0.4,\n        \"image\": \"beans.jpg\",\n        \"type\": \"vegetables\"\n    },\n    {\n        \"_id\": \"cf508444-16fc-4c1f-959a-18ad8a4d8257\",\n        \"name\": \"hot dogs\",\n        \"price\": 1.99,\n        \"image\": \"hotdogs.jpg\",\n        \"type\": \"meat\"\n    },\n    {\n        \"_id\": \"a47947c5-cb6d-4b35-80f0-4ac25f30b2c5\",\n        \"name\": \"New Product\",\n        \"price\": 0.4,\n        \"image\": \"beans.jpg\",\n        \"type\": \"vegetables\"\n    }\n]"
+							"body": "[\n    {\n        \"_id\": \"67b8adff0a798ed05273f15e\",\n        \"name\": \"Updated product\",\n        \"image\": \"kidney.jpg\",\n        \"price\": 0.58,\n        \"categories\": []\n    },\n    {\n        \"_id\": \"67bb4ab33a823604a2fa6ce1\",\n        \"name\": \"New Product\",\n        \"image\": \"beans.jpg\",\n        \"price\": 0.4,\n        \"categories\": []\n    },\n    {\n        \"_id\": \"67bb4e5b534e8253631eb5c1\",\n        \"name\": \"New Product\",\n        \"image\": \"beans.jpg\",\n        \"price\": 0.4,\n        \"categories\": []\n    }\n]"
 						}
 					]
 				},
@@ -92,7 +100,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"New Product\",\n    \"price\": 0.4,\n    \"image\": \"beans.jpg\",\n    \"type\": \"vegetables\"\n}",
+							"raw": "{\n    \"name\": \"New Product 2\",\n    \"price\": 0.4,\n    \"image\": \"beans.jpg\",\n    \"type\": \"vegetables\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -114,13 +122,13 @@
 					},
 					"response": [
 						{
-							"name": "example 1",
+							"name": "Add Product",
 							"originalRequest": {
 								"method": "POST",
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"name\": \"New Product\",\n    \"price\": 0.4,\n    \"image\": \"beans.jpg\",\n    \"type\": \"vegetables\"\n}",
+									"raw": "{\n    \"name\": \"New Product 2\",\n    \"price\": 0.4,\n    \"image\": \"beans.jpg\",\n    \"type\": \"vegetables\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -149,20 +157,28 @@
 									"value": "Express"
 								},
 								{
+									"key": "RateLimit-Policy",
+									"value": "\"1000-in-15min\"; q=1000; w=900; pk=:ZWZmOGU3Y2E1MDY2:"
+								},
+								{
+									"key": "RateLimit",
+									"value": "\"1000-in-15min\"; r=998; t=884"
+								},
+								{
 									"key": "Content-Type",
 									"value": "application/json; charset=utf-8"
 								},
 								{
 									"key": "Content-Length",
-									"value": "119"
+									"value": "265"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"77-Y1KG6+uFlwZ9TOxuF+ZiVcqySSo\""
+									"value": "W/\"109-uutA11OiqyyJ5Xl6GbjxPx8upvI\""
 								},
 								{
 									"key": "Date",
-									"value": "Sat, 15 Feb 2025 16:12:58 GMT"
+									"value": "Sun, 23 Feb 2025 17:07:33 GMT"
 								},
 								{
 									"key": "Connection",
@@ -174,7 +190,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"_id\": \"a47947c5-cb6d-4b35-80f0-4ac25f30b2c5\",\n    \"name\": \"New Product\",\n    \"price\": 0.4,\n    \"image\": \"beans.jpg\",\n    \"type\": \"vegetables\"\n}"
+							"body": "{\n    \"name\": \"New Product 2\",\n    \"image\": \"beans.jpg\",\n    \"price\": 0.4,\n    \"quantity\": 0,\n    \"categories\": [],\n    \"metadata\": {\n        \"isFeatured\": false\n    },\n    \"deleted\": false,\n    \"_id\": \"67bb55d5a309d44c28df9231\",\n    \"reviews\": [],\n    \"createdAt\": \"2025-02-23T17:07:33.182Z\",\n    \"updatedAt\": \"2025-02-23T17:07:33.182Z\",\n    \"__v\": 0\n}"
 						}
 					]
 				},
@@ -185,7 +201,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"Updated product\",\n    \"price\": 0.58,\n    \"image\": \"kidney.jpg\",\n    \"type\": \"vegetables\"\n}",
+							"raw": "{\n    \"name\": \"Updated product\",\n    \"price\": 0.58,\n    \"image\": \"kidney.jpg\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -207,7 +223,7 @@
 							"variable": [
 								{
 									"key": "id",
-									"value": "8f9a5e60-2b6d-4051-9ff4-1aca15bd8e01"
+									"value": "67b8adff0a798ed05273f15e"
 								}
 							]
 						}
@@ -220,7 +236,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"name\": \"Updated product\",\n    \"price\": 0.58,\n    \"image\": \"kidney.jpg\",\n    \"type\": \"vegetables\"\n}",
+									"raw": "{\n    \"name\": \"Updated product\",\n    \"price\": 0.58,\n    \"image\": \"kidney.jpg\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -242,7 +258,7 @@
 									"variable": [
 										{
 											"key": "id",
-											"value": "8f9a5e60-2b6d-4051-9ff4-1aca15bd8e01"
+											"value": "67b8adff0a798ed05273f15e"
 										}
 									]
 								}
@@ -256,20 +272,28 @@
 									"value": "Express"
 								},
 								{
+									"key": "RateLimit-Policy",
+									"value": "\"1000-in-15min\"; q=1000; w=900; pk=:ZWZmOGU3Y2E1MDY2:"
+								},
+								{
+									"key": "RateLimit",
+									"value": "\"1000-in-15min\"; r=997; t=844"
+								},
+								{
 									"key": "Content-Type",
 									"value": "application/json; charset=utf-8"
 								},
 								{
 									"key": "Content-Length",
-									"value": "125"
+									"value": "269"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"7d-koPCA8u9jPaOtogaxiCifr9yrR8\""
+									"value": "W/\"10d-MaHtBZaH4C5RbAVg5z+jxFgr8os\""
 								},
 								{
 									"key": "Date",
-									"value": "Sat, 15 Feb 2025 16:28:32 GMT"
+									"value": "Sun, 23 Feb 2025 17:08:12 GMT"
 								},
 								{
 									"key": "Connection",
@@ -281,7 +305,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"_id\": \"8f9a5e60-2b6d-4051-9ff4-1aca15bd8e01\",\n    \"name\": \"Updated product\",\n    \"price\": 0.58,\n    \"image\": \"kidney.jpg\",\n    \"type\": \"vegetables\"\n}"
+							"body": "{\n    \"metadata\": {\n        \"isFeatured\": false\n    },\n    \"_id\": \"67b8adff0a798ed05273f15e\",\n    \"name\": \"Updated product\",\n    \"image\": \"kidney.jpg\",\n    \"price\": 0.58,\n    \"quantity\": 0,\n    \"categories\": [],\n    \"deleted\": false,\n    \"reviews\": [],\n    \"createdAt\": \"2025-02-21T16:46:55.464Z\",\n    \"updatedAt\": \"2025-02-23T16:40:09.904Z\",\n    \"__v\": 0\n}"
 						}
 					]
 				},
@@ -292,6 +316,103 @@
 						"header": []
 					},
 					"response": []
+				},
+				{
+					"name": "Get Product By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/products/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "67b8adff0a798ed05273f15e"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Product By ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/products/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"products",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "67b8adff0a798ed05273f15e"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "RateLimit-Policy",
+									"value": "\"1000-in-15min\"; q=1000; w=900; pk=:ZWZmOGU3Y2E1MDY2:"
+								},
+								{
+									"key": "RateLimit",
+									"value": "\"1000-in-15min\"; r=996; t=812"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "269"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"10d-pz7ZZF7bcB9SyUkrl/FHfYtmAFA\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 23 Feb 2025 17:08:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"metadata\": {\n        \"isFeatured\": false\n    },\n    \"_id\": \"67b8adff0a798ed05273f15e\",\n    \"name\": \"Updated product\",\n    \"image\": \"kidney.jpg\",\n    \"price\": 0.58,\n    \"quantity\": 0,\n    \"categories\": [],\n    \"deleted\": false,\n    \"reviews\": [],\n    \"createdAt\": \"2025-02-21T16:46:55.464Z\",\n    \"updatedAt\": \"2025-02-23T17:08:12.462Z\",\n    \"__v\": 0\n}"
+						}
+					]
 				}
 			]
 		}

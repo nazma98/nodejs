@@ -8,6 +8,8 @@
 - [ ] File upload
 - [ ] Authentication
 - [ ] Logging
-- [ ] environment variables
+- [x] environment variables
 - [ ] Dockerize app
 - [ ] Migrate to TypeScript
+- [x] Rate limiting
+- [ ] Caching
