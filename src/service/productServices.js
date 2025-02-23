@@ -37,7 +37,7 @@ const updateProduct = (id, payload) => {
     const updatedProductIndex = products.findIndex((product) => product._id === id);
 
     if (updatedProductIndex === -1) {
-        throw new Error (`No product available with id ${id}`);
+        throw new Error (`Product not found`);
     }
 
     products[updatedProductIndex] = { ...products[updatedProductIndex], ...payload }
@@ -49,7 +49,7 @@ const deleteProduct = (id) => {
     const productIndex = products.findIndex((product) => product._id === id);
 
     if (productIndex === -1) {
-        throw new Error (`No product available with id ${id}`);
+        throw new Error (`Product not found`);
     }
 
     products.splice(productIndex, 1);
