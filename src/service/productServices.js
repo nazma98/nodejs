@@ -1,4 +1,5 @@
 const { v4: uuidv4 } = require('uuid');
+const { NotFoundError } = require('../errors');
 
 const products = [
     {
@@ -37,7 +38,7 @@ const updateProduct = (id, payload) => {
     const updatedProductIndex = products.findIndex((product) => product._id === id);
 
     if (updatedProductIndex === -1) {
-        throw new Error (`Product not found`);
+        throw new NotFoundError (`Product not found with id ${id}`);
     }
 
     products[updatedProductIndex] = { ...products[updatedProductIndex], ...payload }
@@ -49,7 +50,7 @@ const deleteProduct = (id) => {
     const productIndex = products.findIndex((product) => product._id === id);
 
     if (productIndex === -1) {
-        throw new Error (`Product not found`);
+        throw new NotFoundError (`Product not found with id ${id}`);
     }
 
     products.splice(productIndex, 1);
