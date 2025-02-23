@@ -1,6 +1,6 @@
 const express = require('express')
 const  { configureRouter } = require('./router');
-const { logRequestMiddleware } = require('./middleware');
+const { logRequestMiddleware, errorHandler } = require('./middleware');
 
 const port = 8000
 
@@ -11,6 +11,8 @@ app.use(express.json())
 app.use(logRequestMiddleware);
 
 configureRouter(app);
+
+app.use(errorHandler);
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
