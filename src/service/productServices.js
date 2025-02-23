@@ -32,3 +32,33 @@ const createProduct = ( productPayload ) => {
 
         return newProduct;
 }
+
+const updateProduct = (id, payload) => {
+    const updatedProductIndex = products.findIndex((product) => product._id === id);
+
+    if (updatedProductIndex === -1) {
+        throw new error (`No product available with id ${id}`);
+    }
+
+    products[updatedProductIndex] = { ...products[updatedProductIndex], ...payload }
+
+    return products[updatedProductIndex];
+}
+
+const deleteProduct = (id) => {
+    const productIndex = products.findIndex((product) => product._id === id);
+
+    if (productIndex === -1) {
+        throw new error (`No product available with id ${id}`);
+    }
+
+    products.splice(productIndex, 1);
+    return products;
+}
+
+module.exports = {
+    getAllProducts,
+    createProduct,
+    updateProduct,
+    deleteProduct,
+};

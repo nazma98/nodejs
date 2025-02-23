@@ -2,7 +2,7 @@ const express = require('express');
 
 const productRouter = express.Router();
 
-const { v4: uuidv4 } = require('uuid');
+const { productServices } = require('../service');
 
 const products = [
     {
@@ -29,29 +29,21 @@ const products = [
 ];
 
 productRouter.get('/', (req, res) => {
-    res.send(products)
+    res.send(productServices.getAllProducts());
 });
 
 productRouter.post('/', (req, res) => {
     const newProductData = req.body;
-    const newProduct = { _id: uuidv4(), ...newProductData }
-    products.unshift(newProduct)
 
-    res.status(201).json(newProduct)
+    res.status(201).json(productServices.createProduct(newProductData));
 });
 
 productRouter.put('/:id', (req, res) => {
     const { id } = req.params;
-    const updatedProductIndex = products.findIndex((product) => product._id === id);
     const payload = req.body;
 
-    if (updatedProductIndex === -1) {
-        return res.status(400).json({ message: `No product available with id ${id}` });
-    }
-
-    products[updatedProductIndex] = { ...products[updatedProductIndex], ...payload }
-
-    res.status(201).json({ message: `Product updated successfully!` })
+    const updatedProduct = productServices.updateProduct(id, payload);
+    res.status(201).json(updatedProduct);
 });
 
 productRouter.delete('/:id', (req, res) => {
