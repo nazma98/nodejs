@@ -1,15 +1,11 @@
-require("dotenv").config();
-
 const mongoose = require('mongoose');
-
-const MONGO_URI = process.env.MONGO_URI;
-const MONGO_DB_NAME = process.env.MONGO_DB;
+const config = require('./src/config');
 
 const connectDB = async () => {
   console.log('Connecting mongoDB...');
   try {
-    await mongoose.connect(MONGO_URI, {
-        dbName: MONGO_DB_NAME,
+    await mongoose.connect(config.db.MONGO_URI, {
+        dbName: config.db.MONGO_DB_NAME,
     });
 
     console.log('MongoDB connected successfully!');
