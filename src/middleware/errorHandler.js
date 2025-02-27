@@ -1,10 +1,14 @@
 const mongoose = require('mongoose');
+const { z } = require('zod');
 
 const { NotFoundError } = require('../errors');
 
 const errorHandler = (err, req, res, next) => {
     console.error(err);
 
+    if(err instanceof z.ZodError) {
+        return res.status(400).send(err.errors);
+    }
     if (err instanceof NotFoundError) {
         return res.status(400).send(err.message)
     }
