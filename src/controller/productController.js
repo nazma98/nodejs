@@ -4,7 +4,7 @@ const { productServices } = require('../service');
 const { ProductSchema } = require('../schema');
 
 const createProduct = asyncHandler(async (req, res) => {
-    const newProduct = await productServices.createProduct(validatedPayload);
+    const newProduct = await productServices.createProduct(req.body);
     res.status(201).json(newProduct);
 });
 

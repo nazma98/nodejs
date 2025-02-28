@@ -10,6 +10,412 @@
 			"name": "e-commerce",
 			"item": [
 				{
+					"name": "users",
+					"item": [
+						{
+							"name": "Get users",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"_id\": \"9bbdfsdfr4f2-2bca-4921-8988-a6d96630ce\",\n    \"name\": \"Alice Johnson\",\n    \"email\": \"alicejohnson@example.com\",\n    \"age\": 25,\n    \"role\": \"Moderator\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/users/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"users",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "example - 1",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"_id\": \"9bbdfsdfr4f2-2bca-4921-8988-a6d96630ce\",\n    \"name\": \"Alice Johnson\",\n    \"email\": \"alicejohnson@example.com\",\n    \"age\": 25,\n    \"role\": \"Moderator\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8000/api/users/",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"users",
+												""
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "244"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"f4-rQEWesYky0mcqj4+CmPiIyVBPFA\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 23 Feb 2025 05:55:37 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"_id\": \"dfc1e13f-bc4d-445b-858f-b16e9c552523\",\n        \"name\": \"John Doe\",\n        \"email\": \"johndoe@example.com\",\n        \"age\": 30,\n        \"role\": \"Admin\"\n    },\n    {\n        \"_id\": \"dbb00ffe-83d1-4be5-9f4b-8d76e797c7d7\",\n        \"name\": \"Jane Smith\",\n        \"email\": \"janesmith@example.com\",\n        \"age\": 28,\n        \"role\": \"Editor\"\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "Create user",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "  {\n        \"_id\": \"dfc1e13f-bc4d-445b-858f-b16e9c552524\",\n        \"name\": \"Andrej\",\n        \"email\": \"andrej@example.com\",\n        \"age\": 30,\n        \"role\": \"Viewer\"\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/users/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"users",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "example - 1",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "  {\n        \"_id\": \"dfc1e13f-bc4d-445b-858f-b16e9c552524\",\n        \"name\": \"Andrej\",\n        \"email\": \"andrej@example.com\",\n        \"age\": 30,\n        \"role\": \"Viewer\"\n    }",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8000/api/users/",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"users",
+												""
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "116"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"74-RuqPzvhU3mpsyaT/KdtRA1nGn9A\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 23 Feb 2025 05:42:13 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"_id\": \"dfc1e13f-bc4d-445b-858f-b16e9c552524\",\n    \"name\": \"Andrej\",\n    \"email\": \"andrej@example.com\",\n    \"age\": 30,\n    \"role\": \"Viewer\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Update user",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"_id\": \"9bbdfsdfr4f2-2bca-4921-8988-a6d96630ce\",\n    \"name\": \"Alice Johnson\",\n    \"email\": \"alicejohnson@example.com\",\n    \"age\": 25,\n    \"role\": \"Viewer\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/users/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"users",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "9bbdfsdfr4f2-2bca-4921-8988-a6d96630ce"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "example - 1",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"_id\": \"9bbdfsdfr4f2-2bca-4921-8988-a6d96630ce\",\n    \"name\": \"Alice Johnson\",\n    \"email\": \"alicejohnson@example.com\",\n    \"age\": 25,\n    \"role\": \"Viewer\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8000/api/users/:id",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"users",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "9bbdfsdfr4f2-2bca-4921-8988-a6d96630ce"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "131"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"83-eXOqxCPE9KUAPz8TuoMEXu+iL/8\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 23 Feb 2025 05:43:59 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"_id\": \"9bbdfsdfr4f2-2bca-4921-8988-a6d96630ce\",\n    \"name\": \"Alice Johnson\",\n    \"email\": \"alicejohnson@example.com\",\n    \"age\": 25,\n    \"role\": \"Viewer\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete user",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/users/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"users",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "388237b5-332c-4578-8b18-3c7901934c"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "example - 1",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8000/api/users/:id",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"users",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "388237b5-332c-4578-8b18-3c7901934c90"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "244"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"f4-rQEWesYky0mcqj4+CmPiIyVBPFA\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 23 Feb 2025 05:54:10 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"_id\": \"dfc1e13f-bc4d-445b-858f-b16e9c552523\",\n        \"name\": \"John Doe\",\n        \"email\": \"johndoe@example.com\",\n        \"age\": 30,\n        \"role\": \"Admin\"\n    },\n    {\n        \"_id\": \"dbb00ffe-83d1-4be5-9f4b-8d76e797c7d7\",\n        \"name\": \"Jane Smith\",\n        \"email\": \"janesmith@example.com\",\n        \"age\": 28,\n        \"role\": \"Editor\"\n    }\n]"
+								}
+							]
+						}
+					]
+				},
+				{
 					"name": "Get products",
 					"request": {
 						"auth": {
@@ -38,7 +444,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:8000/api/products",
+									"raw": "http://localhost:8000/api/products/",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -46,7 +452,8 @@
 									"port": "8000",
 									"path": [
 										"api",
-										"products"
+										"products",
+										""
 									]
 								}
 							},
@@ -59,20 +466,28 @@
 									"value": "Express"
 								},
 								{
+									"key": "RateLimit-Policy",
+									"value": "\"1000-in-15min\"; q=1000; w=900; pk=:ZWZmOGU3Y2E1MDY2:"
+								},
+								{
+									"key": "RateLimit",
+									"value": "\"1000-in-15min\"; r=999; t=900"
+								},
+								{
 									"key": "Content-Type",
 									"value": "application/json; charset=utf-8"
 								},
 								{
 									"key": "Content-Length",
-									"value": "358"
+									"value": "307"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"166-9mqcECAQIp7tZCjhcJMjgLZjvi8\""
+									"value": "W/\"133-jePxGxQaKC6yFGbClvkcBl4dgqA\""
 								},
 								{
 									"key": "Date",
-									"value": "Thu, 20 Feb 2025 17:21:24 GMT"
+									"value": "Fri, 28 Feb 2025 02:04:44 GMT"
 								},
 								{
 									"key": "Connection",
@@ -84,7 +499,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n    {\n        \"_id\": \"07d63b04-b9f3-4e60-afba-7a82d37313d0\",\n        \"name\": \"baked beans\",\n        \"price\": 0.4,\n        \"image\": \"beans.jpg\",\n        \"type\": \"vegetables\"\n    },\n    {\n        \"_id\": \"41b20be8-1974-4f28-bb1a-b9aa73a22641\",\n        \"name\": \"hot dogs\",\n        \"price\": 1.99,\n        \"image\": \"hotdogs.jpg\",\n        \"type\": \"meat\"\n    },\n    {\n        \"_id\": \"57a7d0f9-6a26-49b2-ab48-14575e7fcd55\",\n        \"name\": \"broccoli soup\",\n        \"price\": 1.4,\n        \"image\": \"broccolisoup.jpg\",\n        \"type\": \"soup\"\n    }\n]"
+							"body": "[\n    {\n        \"_id\": \"67bca1ce6003ba81ecd504ca\",\n        \"name\": \"Beef frieda\",\n        \"image\": \"beef.jpg\",\n        \"price\": 12.4,\n        \"categories\": []\n    },\n    {\n        \"_id\": \"67bcabe030401920a0b59314\",\n        \"name\": \"corn soup\",\n        \"image\": \"corn.jpg\",\n        \"price\": 2.4,\n        \"categories\": []\n    },\n    {\n        \"_id\": \"67c00c5289d1e4899170b843\",\n        \"name\": \"corn soup\",\n        \"image\": \"corn.jpg\",\n        \"price\": 2.4,\n        \"categories\": []\n    }\n]"
 						}
 					]
 				},
@@ -98,7 +513,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"beef\",\n    \"price\": 1.4,\n    \"image\": \"beef.jpg\",\n    \"type\": \"meat\"\n}",
+							"raw": "{\n    \"name\": \"corn soup\",\n    \"price\": 2.4,\n    \"image\": \"corn.jpg\",\n    \"type\": \"soup\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -106,7 +521,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8000/api/products",
+							"raw": "http://localhost:8000/api/products/",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -114,7 +529,8 @@
 							"port": "8000",
 							"path": [
 								"api",
-								"products"
+								"products",
+								""
 							]
 						}
 					},
@@ -126,7 +542,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"name\": \"tomato soup\",\n    \"price\": 1.4,\n    \"image\": \"toamtosoup.jpg\",\n    \"type\": \"soup\"\n}",
+									"raw": "{\n    \"name\": \"corn soup\",\n    \"price\": 2.4,\n    \"image\": \"corn.jpg\",\n    \"type\": \"soup\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -134,7 +550,7 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:8000/api/products",
+									"raw": "http://localhost:8000/api/products/",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -142,7 +558,8 @@
 									"port": "8000",
 									"path": [
 										"api",
-										"products"
+										"products",
+										""
 									]
 								}
 							},
@@ -155,20 +572,28 @@
 									"value": "Express"
 								},
 								{
+									"key": "RateLimit-Policy",
+									"value": "\"1000-in-15min\"; q=1000; w=900; pk=:ZWZmOGU3Y2E1MDY2:"
+								},
+								{
+									"key": "RateLimit",
+									"value": "\"1000-in-15min\"; r=999; t=900"
+								},
+								{
 									"key": "Content-Type",
 									"value": "application/json; charset=utf-8"
 								},
 								{
 									"key": "Content-Length",
-									"value": "118"
+									"value": "260"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"76-AxDDmd1Sk2OKN7q+gtA5C/bzj9g\""
+									"value": "W/\"104-2UKe5eB2lTsRFcr9IyXuU7hwhV0\""
 								},
 								{
 									"key": "Date",
-									"value": "Thu, 20 Feb 2025 17:23:20 GMT"
+									"value": "Fri, 28 Feb 2025 02:07:49 GMT"
 								},
 								{
 									"key": "Connection",
@@ -180,7 +605,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"_id\": \"4198bc1b-78a1-44b6-b34e-dafcfd13747f\",\n    \"name\": \"tomato soup\",\n    \"price\": 1.4,\n    \"image\": \"toamtosoup.jpg\",\n    \"type\": \"soup\"\n}"
+							"body": "{\n    \"name\": \"corn soup\",\n    \"image\": \"corn.jpg\",\n    \"price\": 2.4,\n    \"quantity\": 0,\n    \"categories\": [],\n    \"metadata\": {\n        \"isFeatured\": false\n    },\n    \"deleted\": false,\n    \"_id\": \"67c11a74533f1bc80dce1b19\",\n    \"reviews\": [],\n    \"createdAt\": \"2025-02-28T02:07:48.989Z\",\n    \"updatedAt\": \"2025-02-28T02:07:48.989Z\",\n    \"__v\": 0\n}"
 						}
 					]
 				},
@@ -191,7 +616,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"_id\": \"7c08c0d2-5ac7-4cab-afbf-5b379a7f9e73\",\n    \"name\": \"Updated product\",\n    \"price\": 1.4,\n    \"image\": \"beef.jpg\",\n    \"type\": \"meat\"\n}",
+							"raw": "   {\n        \"name\": \"tomato soup\",\n        \"image\": \"tomato.jpg\",\n        \"price\": 12.4,\n        \"type\": \"soup\"\n    \n    }",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -213,7 +638,7 @@
 							"variable": [
 								{
 									"key": "id",
-									"value": "7c08c0d2-5ac7-4cab-afbf-5b379a7f9e73"
+									"value": "67c11a74533f1bc80dce1b19"
 								}
 							]
 						}
@@ -224,6 +649,15 @@
 							"originalRequest": {
 								"method": "PUT",
 								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "   {\n        \"name\": \"tomato soup\",\n        \"image\": \"tomato.jpg\",\n        \"price\": 12.4,\n        \"type\": \"soup\"\n    \n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
 								"url": {
 									"raw": "http://localhost:8000/api/products/:id",
 									"protocol": "http",
@@ -239,34 +673,42 @@
 									"variable": [
 										{
 											"key": "id",
-											"value": "7c08c0d2-5ac7-4cab-afbf-5b379a7f9e73"
+											"value": "67c11a74533f1bc80dce1b19"
 										}
 									]
 								}
 							},
 							"status": "Created",
 							"code": 201,
-							"_postman_previewlanguage": "html",
+							"_postman_previewlanguage": "json",
 							"header": [
 								{
 									"key": "X-Powered-By",
 									"value": "Express"
 								},
 								{
+									"key": "RateLimit-Policy",
+									"value": "\"1000-in-15min\"; q=1000; w=900; pk=:ZWZmOGU3Y2E1MDY2:"
+								},
+								{
+									"key": "RateLimit",
+									"value": "\"1000-in-15min\"; r=997; t=819"
+								},
+								{
 									"key": "Content-Type",
-									"value": "text/html; charset=utf-8"
+									"value": "application/json; charset=utf-8"
 								},
 								{
 									"key": "Content-Length",
-									"value": "29"
+									"value": "260"
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"1d-EAV7WlD5kOjwls2XOFPz7+xN4bE\""
+									"value": "W/\"104-jd/7jUQWcH3+TJzJ0jRSDYTkLWQ\""
 								},
 								{
 									"key": "Date",
-									"value": "Thu, 20 Feb 2025 17:58:57 GMT"
+									"value": "Fri, 28 Feb 2025 02:09:10 GMT"
 								},
 								{
 									"key": "Connection",
@@ -278,7 +720,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "Product updated successfully!"
+							"body": "{\n    \"metadata\": {\n        \"isFeatured\": false\n    },\n    \"_id\": \"67c11a74533f1bc80dce1b19\",\n    \"name\": \"corn soup\",\n    \"image\": \"corn.jpg\",\n    \"price\": 2.4,\n    \"quantity\": 0,\n    \"categories\": [],\n    \"deleted\": false,\n    \"reviews\": [],\n    \"createdAt\": \"2025-02-28T02:07:48.989Z\",\n    \"updatedAt\": \"2025-02-28T02:07:48.989Z\",\n    \"__v\": 0\n}"
 						}
 					]
 				},
@@ -302,14 +744,14 @@
 							"variable": [
 								{
 									"key": "id",
-									"value": "7c08c0d2-5ac7-4cab-afbf-5b379a7f9e73"
+									"value": "67bcabe030401920a0b59314"
 								}
 							]
 						}
 					},
 					"response": [
 						{
-							"name": "example - 1",
+							"name": "example- 1",
 							"originalRequest": {
 								"method": "DELETE",
 								"header": [],
@@ -328,34 +770,30 @@
 									"variable": [
 										{
 											"key": "id",
-											"value": "7c08c0d2-5ac7-4cab-afbf-5b379a7f9e73"
+											"value": "67bcabe030401920a0b59314"
 										}
 									]
 								}
 							},
-							"status": "Created",
-							"code": 201,
-							"_postman_previewlanguage": "json",
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
 							"header": [
 								{
 									"key": "X-Powered-By",
 									"value": "Express"
 								},
 								{
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
+									"key": "RateLimit-Policy",
+									"value": "\"1000-in-15min\"; q=1000; w=900; pk=:ZWZmOGU3Y2E1MDY2:"
 								},
 								{
-									"key": "Content-Length",
-									"value": "38"
-								},
-								{
-									"key": "ETag",
-									"value": "W/\"26-3eTS6pDXZNlF1ZNrCUl9voQwerk\""
+									"key": "RateLimit",
+									"value": "\"1000-in-15min\"; r=995; t=759"
 								},
 								{
 									"key": "Date",
-									"value": "Fri, 21 Feb 2025 05:27:19 GMT"
+									"value": "Fri, 28 Feb 2025 02:10:10 GMT"
 								},
 								{
 									"key": "Connection",
@@ -367,7 +805,107 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"message\": \"Product has been deleted\"\n}"
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Get product by id",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/products/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "67bcabe030401920a0b59314"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "example - 1",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/products/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"products",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "67bcabe030401920a0b59314"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "RateLimit-Policy",
+									"value": "\"1000-in-15min\"; q=1000; w=900; pk=:ZWZmOGU3Y2E1MDY2:"
+								},
+								{
+									"key": "RateLimit",
+									"value": "\"1000-in-15min\"; r=993; t=715"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "283"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"11b-fgXpogs1FijIu+jB8MY1dz32nc4\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 28 Feb 2025 02:10:54 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"metadata\": {\n        \"isFeatured\": false\n    },\n    \"_id\": \"67bcabe030401920a0b59314\",\n    \"name\": \"corn soup\",\n    \"image\": \"corn.jpg\",\n    \"price\": 2.4,\n    \"quantity\": 0,\n    \"categories\": [],\n    \"reviews\": [],\n    \"createdAt\": \"2025-02-24T17:26:56.752Z\",\n    \"updatedAt\": \"2025-02-28T02:10:10.597Z\",\n    \"__v\": 0,\n    \"deletedAt\": \"2025-02-28T02:10:10.597Z\"\n}"
 						}
 					]
 				}
